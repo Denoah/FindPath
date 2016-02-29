@@ -1,5 +1,5 @@
 .ui-autocomplete {
-    position: absolute;
+    position: relative !important;
     z-index: 1000;
     cursor: default;
     padding: 0;
@@ -26,4 +26,36 @@ html, body {
 
 .menu {
     height: 50px;
+}
+
+.table {
+    width: 450px;
+    margin: auto;
+}
+
+.col-sity, .table-td-sity {
+    width: 120px !important;
+}
+
+.col-street, .table-td-street {
+    width: 150px !important;
+}
+
+.col-house, .table-td-house {
+    width: 50px !important;
+}
+
+.table-td-button {
+    width: 70px;
+}
+
+.mainButton {
+    vertical-align: middle;
+}
+
+.centerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }

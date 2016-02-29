@@ -7,13 +7,13 @@ function init () {
     ymaps.modules.require([
         'MultiRouteCustomView'
     ], function (MultiRouteCustomView) {
-        // Создаем экземпляр текстового отображения модели мультимаршрута.
-        // см. файл custom_view.js
+        // РЎРѕР·РґР°РµРј СЌРєР·РµРјРїР»СЏСЂ С‚РµРєСЃС‚РѕРІРѕРіРѕ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РјРѕРґРµР»Рё РјСѓР»СЊС‚РёРјР°СЂС€СЂСѓС‚Р°.
+        // СЃРј. С„Р°Р№Р» custom_view.js
         new MultiRouteCustomView(multiRouteModel);
     });
 
     myMap = new ymaps.Map('map', {
-        center: [53.1945,45.0195], // Москва
+        center: [53.1945,45.0195], // РњРѕСЃРєРІР°
         zoom: 10
     });
 
@@ -29,5 +29,26 @@ function init () {
 function setHeight(freeHeight) {
     var mapElement = document.getElementById('map');
     mapElement.style.height = ($(document).height() - freeHeight) + "px";
+    addParametrs();
 
+}
+
+function setParametr(elementID, parametr) {
+    var element = document.getElementById(elementID);
+    element.value = parametr;
+}
+
+function addParametrs() {
+    setParametr('row1-sity-text', sity1Name);
+    setParametr('row1-street-text', street1Name);
+    setParametr('row1-house-text', house1Name);
+    setParametr('row2-sity-text', sity2Name);
+    setParametr('row2-street-text', street2Name);
+    setParametr('row2-house-text', house2Name);
+    setParametr('row3-sity-text', sity3Name);
+    setParametr('row3-street-text', street3Name);
+    setParametr('row3-house-text', house3Name);
+    setParametr('row4-sity-text', sity4Name);
+    setParametr('row4-street-text', street4Name);
+    setParametr('row4-house-text', house4Name);
 }

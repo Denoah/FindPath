@@ -5,5 +5,10 @@
     <file url="file://$PROJECT_DIR$/src/ml/el/database/DBconnector.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/ml/el/database/Go.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/ml/test/database/DBconnectorTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/resourse/css/init.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/resourse/js/init.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/resourse/js/mapLoader.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/resourse/js/operationWithAMap.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/resourse/js/settings.js" charset="UTF-8" />
   </component>
 </project>

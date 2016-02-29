@@ -11,19 +11,135 @@
     <link rel="stylesheet" href="resourse/css/init.css"/>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="resourse/js/settings.js"></script>
+    <script src="resourse/js/operationWithAMap.js"></script>
     <script src="resourse/js/mapLoader.js"></script>
 
 
 </head>
 <body onload="setHeight(350)">
 <div class="row">
-    <div class="col-md-12 col-lg-12 col-sm-12 map" id="menu">
+    <div class="col-md-12 col-lg-12 col-sm-12" id="menu">
         123
     </div>
 </div>
 <div class="row">
     <div class="col-md-12 col-lg-12 col-sm-12 map" id="map"></div>
 </div>
-<div class="row"></div>
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="height: 10px">
+
+</div>
+<div class="row">
+    <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5">
+        <form action="#" class="form-inline">
+            <table class="table" id="table">
+                <thead>
+                    <td>Город</td>
+                    <td>Улица</td>
+                    <td>Дом</td>
+                    <td></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-td-sity">
+                            <input type="text" id="row1-sity-text" class="ui-autocomplete col-sity" placeholder="Название города"/>
+                        </td>
+                        <td class="table-td-street">
+                            <input type="text" id="row1-street-text" class="ui-autocomplete col-street" placeholder="Улица"/>
+                        </td>
+                        <td class="table-td-house">
+                            <input type="text" id="row1-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
+                        </td>
+                        <td class="table-td">
+                            <input type="button" value="Найти" class="btn btn-success" onclick="Search('1')"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-td-sity">
+                            <input type="text" id="row2-sity-text" class="ui-autocomplete col-sity" placeholder="Название города"/>
+                        </td>
+                        <td class="table-td-street">
+                            <input type="text" id="row2-street-text" class="ui-autocomplete col-street" placeholder="Улица"/>
+                        </td>
+                        <td class="table-td-house">
+                            <input type="text" id="row2-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
+                        </td>
+                        <td class="table-td">
+                            <input type="button" value="Найти" class="btn btn-success"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-td-sity">
+                            <input type="text" id="row3-sity-text" class="ui-autocomplete col-sity" placeholder="Название города"/>
+                        </td>
+                        <td class="table-td-street">
+                            <input type="text" id="row3-street-text" class="ui-autocomplete col-street" placeholder="Улица"/>
+                        </td>
+                        <td class="table-td-house">
+                            <input type="text" id="row3-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
+                        </td>
+                        <td class="table-td">
+                            <input type="button" value="Найти" class="btn btn-success"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-td-sity">
+                            <input type="text" id="row4-sity-text" class="ui-autocomplete col-sity" placeholder="Название города"/>
+                        </td>
+                        <td class="table-td-street">
+                            <input type="text" id="row4-street-text" class="ui-autocomplete col-street" placeholder="Улица"/>
+                        </td>
+                        <td class="table-td-house">
+                            <input type="text" id="row4-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
+                        </td>
+                        <td class="table-td">
+                            <input type="button" value="Найти" class="btn btn-success"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-td-sity">
+                            <input type="text" id="row5-sity-text" class="ui-autocomplete col-sity" placeholder="Название города"/>
+                        </td>
+                        <td class="table-td-street">
+                            <input type="text" id="row5-street-text" class="ui-autocomplete col-street" placeholder="Улица"/>
+                        </td>
+                        <td class="table-td-house">
+                            <input type="text" id="row5-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
+                        </td>
+                        <td class="table-td">
+                            <input type="button" value="Найти" class="btn btn-success"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-td-sity">
+                            <input type="text" id="row6-sity-text" class="ui-autocomplete col-sity" placeholder="Название города"/>
+                        </td>
+                        <td class="table-td-street">
+                            <input type="text" id="row6-street-text" class="ui-autocomplete col-street" placeholder="Улица"/>
+                        </td>
+                        <td class="table-td-house">
+                            <input type="text" id="row6-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
+                        </td>
+                        <td class="table-td">
+                            <input type="button" value="Найти" class="btn btn-success"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="col-lg-1 col-md-1"> </div>
+    <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5">
+        <div class="row">
+            <div class="centerButton">
+                <input type="button" class="btn btn-primary btn-lg" value="Построить маршрут" id="mainButton"/>
+            </div>
+        </div>
+        <div style="height: 10px"></div>
+        <div class="row">
+            <div class="jumbotron">Результат и расчет стоимости</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

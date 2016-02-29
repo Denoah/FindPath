@@ -1,0 +1,19 @@
+//table
+var sity1Name="Заречный";
+var street1Name = "Ленина";
+var house1Name = "18";
+var sity2Name="Пенза";
+var street2Name = "";
+var house2Name = "";
+var sity3Name="Пенза";
+var street3Name = "";
+var house3Name = "";
+var sity4Name="Заречный";
+var street4Name = "";
+var house4Name = "";
+var sity5Name="";
+var street5Name = "";
+var house5Name = "";
+var sity6Name="";
+var street6Name = "";
+var house6Name = "";
