@@ -51,4 +51,17 @@ function addParametrs() {
     setParametr('row4-sity-text', sity4Name);
     setParametr('row4-street-text', street4Name);
     setParametr('row4-house-text', house4Name);
+    setParametr('row5-sity-text', sity5Name);
+    setParametr('row5-street-text', street5Name);
+    setParametr('row5-house-text', house5Name);
+    setParametr('row6-sity-text', sity6Name);
+    setParametr('row6-street-text', street6Name);
+    setParametr('row6-house-text', house6Name);
+    setParametr('price', defaultPrice);
+    setParametr('posadka', posadka);
+    setParametr('prostoi', prostoi);
+    setParametr('prostoiPrice', prostoiPrice);
+    setParametr('countStop', countStop);
+    setParametr('stopPrice', stopPrice);
+    setParametr('bufferText', bufferText);
 }

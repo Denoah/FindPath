@@ -6,7 +6,7 @@
     margin-top: 2px;
     list-style: none;
     background-color: #ffffff;
-    border: 1px solid #ccc -webkit-border-radius : 5 px;
+    border: 1px solid #ccc;
 }
 
 .ui-autocomplete > li {
@@ -58,4 +58,16 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+.output {
+    text-align: center;
+}
+
+.priseForm {
+    text-align: left;
+}
+
+.calc {
+    width: 50px !important;
 }

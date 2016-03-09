@@ -65,7 +65,7 @@
                             <input type="text" id="row2-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
                         </td>
                         <td class="table-td">
-                            <input type="button" value="Найти" class="btn btn-success"/>
+                            <input type="button" value="Найти" class="btn btn-success" onclick="Search('2')"/>
                         </td>
                     </tr>
                     <tr>
@@ -79,7 +79,7 @@
                             <input type="text" id="row3-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
                         </td>
                         <td class="table-td">
-                            <input type="button" value="Найти" class="btn btn-success"/>
+                            <input type="button" value="Найти" class="btn btn-success" onclick="Search('3')"/>
                         </td>
                     </tr>
                     <tr>
@@ -93,7 +93,7 @@
                             <input type="text" id="row4-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
                         </td>
                         <td class="table-td">
-                            <input type="button" value="Найти" class="btn btn-success"/>
+                            <input type="button" value="Найти" class="btn btn-success" onclick="Search('4')"/>
                         </td>
                     </tr>
                     <tr>
@@ -107,7 +107,7 @@
                             <input type="text" id="row5-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
                         </td>
                         <td class="table-td">
-                            <input type="button" value="Найти" class="btn btn-success"/>
+                            <input type="button" value="Найти" class="btn btn-success" onclick="Search('5')"/>
                         </td>
                     </tr>
                     <tr>
@@ -121,7 +121,7 @@
                             <input type="text" id="row6-house-text" class="ui-autocomplete col-house" placeholder="Дом"/>
                         </td>
                         <td class="table-td">
-                            <input type="button" value="Найти" class="btn btn-success"/>
+                            <input type="button" value="Найти" class="btn btn-success" onclick="Search('6')"/>
                         </td>
                     </tr>
                 </tbody>
@@ -132,12 +132,58 @@
     <div class="col-sm-12 col-xs-12 col-md-5 col-lg-5">
         <div class="row">
             <div class="centerButton">
-                <input type="button" class="btn btn-primary btn-lg" value="Построить маршрут" id="mainButton"/>
+                <input type="button" class="btn btn-primary btn-lg" value="Построить маршрут" id="mainButton" onclick="CreateWay()"/>
             </div>
         </div>
         <div style="height: 10px"></div>
         <div class="row">
-            <div class="jumbotron">Результат и расчет стоимости</div>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="textcontainer">
+                        <p id="output" style="font-size: 16px"></p>
+                    </div>
+                    <form action="#" class="form-inline" id="priseForm">
+                        <label for="wayLength">Длина пути</label>
+                        <input type="text" id="wayLength" value="" class="form-control input-sm disabled calc" disabled/>
+                        <label for="price">&nbsp;* Цена</label>
+                        <input type="text" id="price" class="form-control input-sm calc">
+                        <label for="result">=</label>
+                        <input type="text" id="result" value="" class="form-control input-sm calc">
+                        <input type="button" value="Пересчитать" class="btn btn-success" onclick="getPrice()">
+                        <br><br>
+                        <div class="checkbox">
+                            <input type="checkbox" id="checkboxParameters">
+                            <label for="checkboxParameters">С дополнительными параметрами</label>
+                        </div>
+                        <br>
+                        <label for="posadka">Посадка</label>
+                        <input type="text" id="posadka" class="form-control input-sm calc">
+                        <br>
+                        <label for="prostoi">Простой(мин)</label>
+                        <input type="text" id="prostoi" value="0" class="form-control input-sm calc"/>
+                        <br/>
+                        <label for="prostoiPrice">Стоимость минуты простоя</label>
+                        <input type="text" id="prostoiPrice" value="5" class="form-control input-sm calc"/>
+                        <br/>
+                        <label for="countStop">Количество остановок</label>
+                        <input type="text" id="countStop" value="0" class="form-control input-sm calc"/>
+                        <br/>
+                        <label for="stopPrice">Стоимость остановки</label>
+                        <input type="text" id="stopPrice" value="20" class="form-control input-sm calc"/>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xs-12 col-md-12 col-lg-12" >
+        <div class="row">
+            <form action="#" class="form-inline" style="text-align: center">
+                <input type="text" class="input-sm bufferText" size="60" id="bufferText">
+                <input type="button" value="В память" onclick="setBuffer()">
+
+            </form>
+            <br>
         </div>
     </div>
 </div>
