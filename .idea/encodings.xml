@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/5da7b09c-5922-420d-b095-b2b333d61708/console.sql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/ml/el/database/DBconnector.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/ml/el/database/Go.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/ml/test/database/DBconnectorTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/resourse/css/init.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/resourse/js/init.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/resourse/js/mapLoader.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/web/resourse/js/operationWithAMap.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/resourse/js/settings.js" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

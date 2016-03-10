@@ -18,14 +18,7 @@ public class GetSity extends HttpServlet {
             response.getWriter().write(dBconnector.setQuery(query));
         } else {
             String query = "INSERT INTO sity (name) VALUES ('" + parametr + "');";
-            try {
-                dBconnector.setInsertQuery(query);
-                response.getWriter().write("ok");
-            } catch (Exception e) {
-                response.getWriter().write("false");
-            }
-
-
+            response.getWriter().write(dBconnector.setInsertQuery(query));
         }
 
 

@@ -15,14 +15,20 @@ function addSityOnLoad() {
 }
 
 function addSity() {
-    var data = document.getElementById('sity').value;
-    var act= 'act=' + data;
+    var data = document.getElementById('sity');
+    var act= 'act=' + data.value;
     $.ajax({
         type: 'POST',
         url: '/sql/getSity',
         data: act,
         success: function(text) {
-            addSityOnLoad();
+            data.value = "";
+            if (text == "err") {
+                alert("Данный город уже внесен в базу");
+            } else {
+                addSityOnLoad();
+            }
+
         }
     })
 }

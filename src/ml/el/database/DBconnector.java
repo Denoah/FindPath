@@ -4,6 +4,7 @@ import java.sql.*;
 
 public class DBconnector {
     String connectionString = "jdbc:postgresql://localhost:5432/taxi";
+    String connectionStringHome = "jdbc:postgresql://192.168.1.100:5432/taxi";
     String user = "taxi";
     String database = "taxi";
     String pass = "taxi";
@@ -12,7 +13,7 @@ public class DBconnector {
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection(connectionString, user, pass);
+            connection = DriverManager.getConnection(connectionStringHome, user, pass);
         } catch (ClassNotFoundException e) {
             System.out.println(e);
         } catch (SQLException e) {
