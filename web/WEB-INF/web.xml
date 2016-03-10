@@ -11,4 +11,14 @@
         <servlet-name>Go</servlet-name>
         <url-pattern>/go</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSity</servlet-name>
+        <servlet-class>ml.el.database.GetSity</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getSity</servlet-name>
+        <url-pattern>/getSity</url-pattern>
+    </servlet-mapping>
 </web-app>

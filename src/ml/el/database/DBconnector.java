@@ -8,7 +8,7 @@ public class DBconnector {
     String database = "taxi";
     String pass = "taxi";
 
-    public Connection connect() {
+    private Connection connect() {
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
@@ -44,5 +44,23 @@ public class DBconnector {
 
 
         return result;
+    }
+
+    public String setInsertQuery(String query) {
+        Connection connection = connect();
+        try {
+            Statement statement = connection.createStatement();
+            statement.addBatch(query);
+            statement.executeBatch();
+            statement.close();
+            connection.close();
+            return "ok";
+        } catch (BatchUpdateException e) {
+            System.out.println("Ошибка добавления");
+            return "err";
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "err2";
+        }
     }
 }
