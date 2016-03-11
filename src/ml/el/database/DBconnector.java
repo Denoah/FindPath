@@ -9,11 +9,11 @@ public class DBconnector {
     String database = "taxi";
     String pass = "taxi";
 
-    private Connection connect() {
+    public Connection connect() {
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection(connectionStringHome, user, pass);
+            connection = DriverManager.getConnection(connectionString, user, pass);
         } catch (ClassNotFoundException e) {
             System.out.println(e);
         } catch (SQLException e) {

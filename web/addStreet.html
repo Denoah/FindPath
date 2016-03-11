@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Добавление города</title>
+    <title>Добавление улицы</title>
     <script src="resourse/jquery/jquery-2.2.0.min.js"></script>
     <script src="resourse/jquery/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
     <script src="resourse/bootstrap/js/bootstrap.min.js"></script>
@@ -12,7 +12,7 @@
     <script src="resourse/js/database.js"></script>
 
 </head>
-<body onload="addSityOnLoad()">
+<body onload="addStreetOnLoad()">
 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -35,8 +35,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Добавление<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Города</a></li>
-                            <li><a href="addStreet.html">Улицы</a></li>
+                            <li><a href="addSity.html">Города</a></li>
+                            <li><a href="#">Улицы</a></li>
                             <li><a href="addPublicPlace.html">Привязки</a></li>
                         </ul>
                     </li>
@@ -51,9 +51,9 @@
 </div>
 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
     <form action="#" class="form-inline">
-        <label for="input">Название города</label>
+        <label for="input">Название улицы</label>
         <input type="text" class="input-sm" id="input">
-        <input type="button" class="btn btn-success" value="Добавить" id="addButton" onclick="addSity()">
+        <input type="button" class="btn btn-success" value="Добавить" id="addButton" onclick="addStreet()">
         <br>
         <br>
         <br>

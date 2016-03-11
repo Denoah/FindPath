@@ -21,4 +21,24 @@
         <servlet-name>getSity</servlet-name>
         <url-pattern>/getSity</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>getStreet</servlet-name>
+        <servlet-class>ml.el.database.GetStreet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>getStreet</servlet-name>
+        <url-pattern>/getStreet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>getPlace</servlet-name>
+        <servlet-class>ml.el.database.GetPlace</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>getPlace</servlet-name>
+        <url-pattern>/getPlace</url-pattern>
+    </servlet-mapping>
 </web-app>

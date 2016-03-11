@@ -1,21 +1,4 @@
-.ui-autocomplete {
-    position: relative !important;
-    z-index: 1000;
-    cursor: default;
-    padding: 0;
-    margin-top: 2px;
-    list-style: none;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-}
 
-.ui-autocomplete > li {
-    padding: 3px 20px;
-}
-
-.ui-autocomplete > li.ui-state-focus {
-    background-color: #337ab7;
-}
 
 html, body {
     width: 100%;
@@ -70,4 +53,28 @@ html, body {
 
 .calc {
     width: 50px !important;
+}
+
+.ui-autocomplete {
+    position: relative !important;
+    z-index: 1000;
+    cursor: default;
+    padding: 0;
+    margin-top: 2px;
+    list-style: none;
+    background-color: rgba(60, 63, 65, 0.97);
+    width: 1px;
+    border: 1px solid #ccc -webkit-border-radius : 5 px;
+}
+
+.ui-autocomplete > li {
+    padding: 3px 20px;
+}
+
+.ui-autocomplete > li.ui-state-focus {
+    background-color: #337ab7;
+}
+
+.ui-helper-hidden-accessible {
+    display: none;
 }

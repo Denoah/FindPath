@@ -24,12 +24,14 @@ $(function() {
         }
     });
 
-    $( "#input" ).autocomplete({
+    $( ".col-sity" ).autocomplete({
         source: items,
         autoFocus: true
     });
 
+    $( ".col-street" ).autocomplete({
+        source: streets,
+        autoFocus: true
+    });
+
 });
-
-
-
