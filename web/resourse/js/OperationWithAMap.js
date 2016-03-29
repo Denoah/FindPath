@@ -8,6 +8,23 @@ function Search(elementOfSerch) {
     console.log(sity);
     console.log('row' + elementOfSerch +'-sity-text');
     street = document.getElementById('row' + elementOfSerch +'-street-text').value;
+
+    console.log("start servlet");
+    console.log("street = " + street);
+
+    $.ajax({
+        url: '/sql/getAdress',
+        async: false,
+        method: 'POST',
+        data: "name=" + street,
+        success: function(text) {
+            street = text;
+        }
+    });
+
+    console.log("stop servlet");
+    console.log("street = " + street);
+
     house = document.getElementById('row' + elementOfSerch +'-house-text').value;
     tag = sity + ", Пензенская область, " + street + " " + house;
     console.log("tag: " + tag);
